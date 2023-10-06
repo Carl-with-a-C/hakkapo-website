@@ -1,0 +1,26 @@
+// Breakpoints
+
+$layout-breakpoint-desktop-xl: 1920px;
+$layout-breakpoint-desktop-lrg: 1480px;
+$layout-breakpoint-desktop: 1024px;
+$layout-breakpoint-tablet: 800px;
+$layout-breakpoint-mobile: 480px;
+
+// spacing
+
+:root {
+  --spacing-unit: 10px;
+
+  --spacing-256: calc(25.6 * var(--spacing-unit));
+  --spacing-128: calc(12.8 * var(--spacing-unit));
+  --spacing-64: calc(6.4 * var(--spacing-unit));
+  --spacing-32: calc(3.2 * var(--spacing-unit));
+  --spacing-16: calc(1.6 * var(--spacing-unit));
+
+  @media (max-width: $layout-breakpoint-desktop-lrg) {
+    --spacing-unit: 7.5px;
+  }
+  @media (max-width: $layout-breakpoint-desktop) {
+    --spacing-unit: 5px;
+  }
+}
