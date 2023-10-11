@@ -1,10 +1,13 @@
 .header {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   z-index: 11;
   color: $off-black;
   background-color: $white;
   transition: 0.3s;
+  display: block;
+  padding-bottom: var(--spacing-32);
 }
 
 .nav-container {
