@@ -6,7 +6,7 @@ import jumpingVectorFg from "../Multimedia/Vectors/foreground.svg";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <section className="hero-container">
       <div className="hero-img-container container">
         <img src={heroSplash} alt="a light and airy restaurant" />
       </div>
@@ -48,7 +48,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

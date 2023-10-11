@@ -1,0 +1,68 @@
+.opening-hours-column-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.left {
+  align-self: start;
+}
+
+.center {
+  align-self: center;
+  text-align: center;
+
+  img {
+    margin-top: -22%;
+  }
+}
+
+.o-h-title {
+  margin: 0 auto;
+  width: 50%;
+  padding-bottom: var(--spacing-64);
+}
+
+.o-h-times-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-32);
+  padding-bottom: var(--spacing-128);
+}
+
+.o-h-times {
+  strong {
+    font-weight: 700;
+  }
+  display: flex;
+  justify-content: space-between;
+  background-color: $green;
+  padding: 10px;
+}
+
+.o-h-day {
+  h3 {
+    font-weight: 700;
+  }
+}
+
+.right {
+  align-self: end;
+}
+
+.o-h-img-container {
+  img {
+    width: 100%;
+  }
+}
+
+.o-h-blurb-container {
+  padding: var(--spacing-64) 0;
+  :nth-child(1) {
+    padding-bottom: var(--spacing-32);
+  }
+}
+
+.love-doodle-img-container {
+  display: flex;
+  justify-content: center;
+}
