@@ -1,0 +1,43 @@
+.hero-container {
+}
+
+.hero-img-container {
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
+
+.lower-hero-container {
+  position: relative;
+}
+
+.blurb-container {
+  display: flex;
+  padding-top: var(--spacing-128);
+  width: 65%;
+  gap: var(--spacing-64);
+  align-items: flex-start;
+}
+
+.blurb--title {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.jumping-vector-container {
+  position: absolute;
+  right: 0;
+  top: -45%;
+  width: 650px;
+}
+
+.jumping-vector {
+  position: absolute;
+  top: 0;
+  width: 600px;
+}
