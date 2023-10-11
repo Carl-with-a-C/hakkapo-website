@@ -1,0 +1,28 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  color: $off-black;
+  background-color: $white;
+  transition: 0.3s;
+}
+
+.nav-container {
+  padding-top: var(--spacing-32);
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+}
+
+.logo-container {
+  justify-self: center;
+  img {
+    width: calc(var(--spacing-256) * 1.5);
+  }
+}
+
+.nav-links-container {
+  justify-self: end;
+  text-align: right;
+}
