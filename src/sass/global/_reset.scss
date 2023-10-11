@@ -113,16 +113,11 @@ html {
   width: 100vw;
   background-color: $white;
   color: $black;
+  position: relative;
 }
 
 .container {
-  padding: 0 calc(var(--spacing-36));
-  @media (max-width: $layout-breakpoint-tablet) {
-    padding: 0 calc(var(--spacing-36) / 2);
-  }
-  // @media (max-width: $layout-breakpoint-mobile) {
-  //   margin: 0 var(--padding-smltop);
-  // }
+  padding: 0 calc(var(--spacing-64));
 }
 
 button {
