@@ -1,6 +1,16 @@
+.opening-hours-container {
+}
+
 .opening-hours-column-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: -5%;
+  @media (max-width: $layout-breakpoint-tablet) {
+    grid-template-columns: 1fr;
+    padding-top: calc(var(--spacing-256) * 2.5);
+    margin-bottom: var(--spacing-128);
+    row-gap: var(--spacing-128);
+  }
 }
 
 .left {
@@ -12,7 +22,11 @@
   text-align: center;
 
   img {
-    margin-top: -22%;
+    margin-top: -100px;
+    @media (max-width: $layout-breakpoint-desktop) {
+      width: 200px;
+      margin-top: -80px;
+    }
   }
 }
 
@@ -65,4 +79,9 @@
 .love-doodle-img-container {
   display: flex;
   justify-content: center;
+  @media (max-width: $layout-breakpoint-tablet) {
+    img {
+      width: 100%;
+    }
+  }
 }

@@ -118,6 +118,9 @@ html {
 
 .container {
   padding: 0 calc(var(--spacing-64));
+  @media (max-width: $layout-breakpoint-tablet) {
+    padding: 0 calc(var(--spacing-32));
+  }
 }
 
 button {
