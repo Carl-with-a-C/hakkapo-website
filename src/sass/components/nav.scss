@@ -14,7 +14,9 @@
   padding-top: var(--spacing-32);
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  @media (min-width: $layout-breakpoint-tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   align-items: end;
 }
 
@@ -28,4 +30,17 @@
 .nav-links-container {
   justify-self: end;
   text-align: right;
+}
+
+@media (max-width: $layout-breakpoint-tablet) {
+  .nav-links-container,
+  .address-container {
+    display: none;
+  }
+  .logo-container {
+    justify-self: center;
+    img {
+      width: calc(var(--spacing-256) * 1.2);
+    }
+  }
 }
