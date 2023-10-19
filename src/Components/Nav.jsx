@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import HeaderLogo from "../Multimedia/Vectors/HakkapoWordmarkHEADER.svg";
 
-const Nav = () => {
+const Nav = ({ setMenuOpen, menuOpen }) => {
+  console.log(menuOpen);
   return (
     <header className="header">
       <div className="nav-container container">
@@ -35,7 +36,13 @@ const Nav = () => {
             <p>contact us</p>
           </div>
           <div className="nav-link menu-link">
-            <p>menu</p>
+            <button
+              onClick={() => {
+                setMenuOpen(!menuOpen);
+              }}
+            >
+              <p>menu</p>
+            </button>
           </div>
         </motion.div>
       </div>

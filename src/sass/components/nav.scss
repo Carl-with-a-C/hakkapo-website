@@ -47,6 +47,13 @@
   text-align: right;
 }
 
+.nav-link {
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}
+
 @media (max-width: $layout-breakpoint-tablet) {
   .nav-links-container,
   .address-container {

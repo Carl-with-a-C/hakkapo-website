@@ -4,13 +4,16 @@ import "./sass/main.scss";
 import OpeningHours from "./Components/OpeningHours";
 import Menu from "./Components/Menu";
 
+import { useState } from "react";
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(true);
   return (
     <div className="App">
-      <Nav />
+      <Nav setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
       <Hero />
       <OpeningHours />
-      <Menu />
+      <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
     </div>
   );
 }
