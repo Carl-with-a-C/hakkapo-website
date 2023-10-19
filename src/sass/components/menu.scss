@@ -1,0 +1,44 @@
+.menu {
+  position: relative;
+  z-index: 20;
+}
+
+.table-container {
+  position: fixed;
+  bottom: 0;
+  height: 100vh;
+  img {
+    height: 100vh;
+    width: 100vw;
+  }
+  button {
+    position: absolute;
+    top: var(--spacing-32);
+    right: var(--spacing-32);
+    background-color: transparent;
+    color: $white;
+    border: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.menu-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-card {
+  width: 300px;
+  margin: 0 auto;
+  transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.5s;
+  &:hover {
+    transform: translateY(-50px);
+    scale: 1.05;
+    transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.75s;
+  }
+}
