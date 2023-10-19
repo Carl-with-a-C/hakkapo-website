@@ -7,7 +7,7 @@ import Menu from "./Components/Menu";
 import { useState } from "react";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="App">
       <Nav setMenuOpen={setMenuOpen} menuOpen={menuOpen} />

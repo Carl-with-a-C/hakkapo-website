@@ -25,6 +25,9 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
+  @media (max-width: $layout-breakpoint-tablet) {
+    bottom: 2vh;
+  }
 }
 
 .menu-card-container {
@@ -36,9 +39,13 @@
   width: 300px;
   margin: 0 auto;
   transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.5s;
-  &:hover {
+  &:hover,
+  :focus {
     transform: translateY(-50px);
     scale: 1.05;
     transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.75s;
+  }
+  @media (max-width: $layout-breakpoint-tablet) {
+    width: 85%;
   }
 }

@@ -10,6 +10,31 @@
   padding-bottom: var(--spacing-32);
 }
 
+.mobile-btn-container {
+  position: absolute;
+  right: 0;
+  top: 80vh;
+  @media (min-width: $layout-breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.mobile-menu-btn {
+  border: none;
+  background: $black;
+  height: var(--spacing-256);
+  width: var(--spacing-64);
+  color: white;
+  h4 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    -webkit-text-orientation: upright;
+  }
+  @media (min-width: $layout-breakpoint-tablet) {
+    display: none;
+  }
+}
+
 .nav-container {
   padding-top: var(--spacing-32);
   width: 100vw;
@@ -51,6 +76,7 @@
   button {
     border: none;
     background-color: transparent;
+    padding: 0;
   }
 }
 

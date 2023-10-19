@@ -6,6 +6,16 @@ const Nav = ({ setMenuOpen, menuOpen }) => {
   return (
     <header className="header">
       <div className="nav-container container">
+        <div className="mobile-btn-container">
+          <button
+            className="mobile-menu-btn"
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+            }}
+          >
+            <h4>menu</h4>
+          </button>
+        </div>
         <motion.div
           className="address-container"
           animate={{ opacity: 1 }}
