@@ -6,16 +6,27 @@ const Nav = ({ setMenuOpen, menuOpen }) => {
   return (
     <header className="header">
       <div className="nav-container container">
-        <div className="mobile-btn-container">
-          <button
+        <motion.div
+          className="mobile-btn-container"
+          initial={{ x: "200%" }}
+          animate={{ x: "0" }}
+          transition={{
+            delay: 2.25,
+            duration: 0.95,
+            ease: [0.78, 0.01, 0.21, 1],
+          }}
+        >
+          <motion.button
             className="mobile-menu-btn"
             onClick={() => {
               setMenuOpen(!menuOpen);
             }}
+            animate={{ x: menuOpen ? "200%" : "0%" }}
+            transition={{ duration: 0.95, ease: [0.78, 0.01, 0.21, 1] }}
           >
             <h4>menu</h4>
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
         <motion.div
           className="address-container"
           animate={{ opacity: 1 }}
@@ -32,9 +43,12 @@ const Nav = ({ setMenuOpen, menuOpen }) => {
           }}
           transition={{ duration: 2.3, ease: [0.78, 0.01, 0.21, 1] }}
         >
-          <img src={HeaderLogo} alt="Hakkapo Logo" />
-          {/* <div className="hakkapo cover"></div>
-          <div className="chinese cover"></div> */}
+          <motion.img
+            src={HeaderLogo}
+            alt="Hakkapo Logo"
+            animate={{ y: menuOpen ? "-150%" : "0" }}
+            transition={{ duration: 0.75, ease: [0.78, 0.01, 0.21, 1] }}
+          />
         </motion.div>
         <motion.div
           className="nav-links-container"

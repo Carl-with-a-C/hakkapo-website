@@ -11,6 +11,7 @@
 }
 
 .mobile-btn-container {
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 80vh;
@@ -27,8 +28,8 @@
   color: white;
   h4 {
     writing-mode: vertical-rl;
-    text-orientation: upright;
     -webkit-text-orientation: upright;
+    text-orientation: upright;
   }
   @media (min-width: $layout-breakpoint-tablet) {
     display: none;
@@ -46,26 +47,11 @@
 }
 
 .logo-container {
-  // position: relative;
   justify-self: center;
   img {
     width: calc(var(--spacing-256) * 1.5);
   }
 }
-
-// .cover {
-//   position: absolute;
-//   background-color: $white;
-//   width: 100%;
-//   height: 30px;
-//   right: 0;
-// }
-// .hakkapo {
-//   top: 50%;
-// }
-// .chinese {
-//   bottom: 0;
-// }
 
 .nav-links-container {
   justify-self: end;
