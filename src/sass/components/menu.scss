@@ -7,6 +7,7 @@
   position: fixed;
   bottom: 0;
   height: 100vh;
+
   img {
     height: 100vh;
     width: 100vw;
@@ -23,22 +24,23 @@
 
 .menu-container {
   position: fixed;
-  bottom: 0;
+  bottom: 20vh;
   width: 100vw;
+
   @media (max-width: $layout-breakpoint-tablet) {
-    bottom: 2vh;
+    top: 20vh;
   }
 }
 
 .menu-card-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .menu-card {
-  width: 300px;
+  width: 280px;
   margin: 0 auto;
-  transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.5s;
   &:hover,
   :focus {
     transform: translateY(-50px);
@@ -48,4 +50,57 @@
   @media (max-width: $layout-breakpoint-tablet) {
     width: 85%;
   }
+}
+
+.ramen {
+  margin-bottom: -20vh;
+  @media (max-width: $layout-breakpoint-tablet) {
+    width: 65%;
+    margin-top: -10vh;
+  }
+}
+
+.sp {
+  @media (max-width: $layout-breakpoint-tablet) {
+    width: 75%;
+  }
+}
+
+.dessert {
+  width: 500px;
+  @media (max-width: $layout-breakpoint-tablet) {
+    width: 85%;
+    padding-top: var(--spacing-128);
+  }
+}
+
+.menu-pagination-container {
+  position: fixed;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: var(--spacing-32);
+  @media (min-width: $layout-breakpoint-tablet) {
+    right: auto;
+  }
+}
+
+.menu-pagination {
+  display: flex;
+  gap: var(--spacing-16);
+  margin: 0 auto;
+  justify-content: center;
+  color: $white;
+}
+
+.menu-page {
+  opacity: 80%;
+}
+
+.active {
+  font-weight: 700;
+  opacity: 100%;
+  color: $white;
 }

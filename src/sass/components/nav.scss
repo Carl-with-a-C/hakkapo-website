@@ -47,6 +47,7 @@
 }
 
 .logo-container {
+  opacity: 0;
   justify-self: center;
   img {
     width: calc(var(--spacing-256) * 1.5);
