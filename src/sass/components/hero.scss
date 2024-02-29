@@ -30,7 +30,7 @@
   display: flex;
   padding-top: var(--spacing-128);
   width: 65%;
-  gap: var(--spacing-64);
+  gap: var(--spacing-16);
   align-items: flex-start;
   @media (max-width: $layout-breakpoint-tablet) {
     flex-direction: column;
