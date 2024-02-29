@@ -4,6 +4,9 @@ import { wrap } from "popmotion";
 
 import Table from "../Multimedia/Images/menu-wood.jpg";
 
+import ArrowR from "../Multimedia/Vectors/ArrowR.svg";
+import ArrowL from "../Multimedia/Vectors/ArrowL.svg";
+
 import BaoMenu from "../Multimedia/Vectors/MenuSVGs/BaoBox.svg";
 import DonburiMenu from "../Multimedia/Vectors/MenuSVGs/DonburiBox.svg";
 import RamenMenu from "../Multimedia/Vectors/MenuSVGs/RamenBox.svg";
@@ -16,7 +19,7 @@ const Images = [
   { image: DonburiMenu, title: "donburi" },
   { image: RamenMenu, title: "ramen" },
   { image: SidesMenu, title: "sides" },
-  { image: SPMenu, title: "sp" },
+  { image: SPMenu, title: "small plates" },
   { image: DessertMenu, title: "dessert" },
 ];
 
@@ -81,7 +84,7 @@ const Menu = ({ setMenuOpen, menuOpen }) => {
           animate={{ opacity: menuOpen ? 1 : 0 }}
           transition={{ delay: 1, duration: 0.75, ease: [0.78, 0.01, 0.21, 1] }}
         >
-          <h4>close x</h4>
+          <motion.h4 whileTap={{ scale: 0.9 }}>close x</motion.h4>
         </motion.button>
         <img src={Table} alt="wodden table surface" />
       </motion.div>
@@ -131,14 +134,33 @@ const Menu = ({ setMenuOpen, menuOpen }) => {
           <ul className="menu-pagination">
             {Images.map((image, index) => (
               <li
+                key={index}
                 className={
                   imageIndex === index ? "active menu-page" : "menu-page"
                 }
               >
-                <p>{image.title}</p>
+                <button onClick={() => setPage([index, direction])}>
+                  <p>{image.title}</p>
+                </button>
               </li>
             ))}
           </ul>
+        </div>
+        <div className="navigation-btns--container">
+          <div className="prev navigation-btns" onClick={() => paginate(-1)}>
+            <motion.img
+              src={ArrowL}
+              alt="arrow pointing left"
+              whileTap={{ scale: 0.9 }}
+            />
+          </div>
+          <div className="next navigation-btns" onClick={() => paginate(1)}>
+            <motion.img
+              src={ArrowR}
+              alt="arrow pointing right"
+              whileTap={{ scale: 0.9 }}
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -43,6 +43,10 @@ const Hero = () => {
           ease: [0.78, 0.01, 0.21, 1],
         }}
       >
+        <div className="hero-address-container container">
+          <p>13 Jack Rosenthal St, Manchester M15 4FN</p>
+        </div>
+
         <div className="blurb-container container">
           <div className="blurb--title">
             <h2>INTRODUCING</h2>

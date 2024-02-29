@@ -24,11 +24,14 @@
 
 .menu-container {
   position: fixed;
-  bottom: 20vh;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  height: fit-content;
   width: 100vw;
 
   @media (max-width: $layout-breakpoint-tablet) {
-    top: 20vh;
+    // top: 20vh;
   }
 }
 
@@ -39,7 +42,7 @@
 }
 
 .menu-card {
-  width: 280px;
+  width: 400px;
   margin: 0 auto;
   &:hover,
   :focus {
@@ -48,21 +51,24 @@
     transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.75s;
   }
   @media (max-width: $layout-breakpoint-tablet) {
-    width: 85%;
+    width: 60%;
+  }
+  @media (max-width: $layout-breakpoint-mobile) {
+    width: 80%;
   }
 }
 
 .ramen {
-  margin-bottom: -20vh;
-  @media (max-width: $layout-breakpoint-tablet) {
-    width: 65%;
-    margin-top: -10vh;
-  }
+  width: 220px;
 }
 
-.sp {
+.plates {
+  width: 280px;
   @media (max-width: $layout-breakpoint-tablet) {
-    width: 75%;
+    width: 45%;
+  }
+  @media (max-width: $layout-breakpoint-mobile) {
+    width: 70%;
   }
 }
 
@@ -70,7 +76,6 @@
   width: 500px;
   @media (max-width: $layout-breakpoint-tablet) {
     width: 85%;
-    padding-top: var(--spacing-128);
   }
 }
 
@@ -89,18 +94,57 @@
 
 .menu-pagination {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-16);
   margin: 0 auto;
   justify-content: center;
-  color: $white;
+  align-items: center;
 }
 
 .menu-page {
   opacity: 80%;
+  button {
+    background: none;
+    border: none;
+    color: $white;
+    transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.25s;
+  }
+  transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.25s;
 }
 
 .active {
   font-weight: 700;
   opacity: 100%;
+  button {
+    background: none;
+    border: none;
+    color: $white;
+    font-weight: 700;
+  }
+  transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.25s;
+}
+
+.navigation-btns--container {
+  @media (max-width: $layout-breakpoint-tablet) {
+    display: none;
+  }
+  bottom: 50vh;
+  position: fixed;
+}
+
+.navigation-btns {
   color: $white;
+  position: fixed;
+  cursor: pointer;
+  img {
+    width: var(--spacing-64);
+  }
+}
+
+.prev {
+  left: 10vw;
+}
+
+.next {
+  right: 10vw;
 }
