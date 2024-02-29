@@ -45,16 +45,14 @@ const Hero = () => {
       >
         <div className="blurb-container container">
           <div className="blurb--title">
-            <h2>LOREM IPSUM</h2>
+            <h2>INTRODUCING</h2>
           </div>
           <div className="blurb--subtitle">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Bibendum ut tristique et egestas quis ipsum suspendisse ultrices
-              gravida. Nunc lobortis mattis aliquam faucibus purus in. Cursus
-              metus aliquam{" "}
-            </p>
+            <h4>
+              Izakaya <span className="bold">(‘‘Stay. Drink. Sake.’’)</span>{" "}
+              from Japanese is a type of informal, cosy establishment where
+              people eat, drink and socialize after a long day at work.{" "}
+            </h4>
           </div>
         </div>
         <div className="jumping-vector-container">
