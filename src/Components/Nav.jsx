@@ -33,7 +33,7 @@ const Nav = ({ setMenuOpen, menuOpen }) => {
           initial={{ opacity: 0 }}
           transition={{ delay: 2.2, duration: 0.75 }}
         >
-          <p>123 Manchester Building, Manchester, M1 11A</p>
+          <p>13 Jack Rosenthal St, Manchester M15 4FN</p>
         </motion.div>
         <motion.div
           className="logo-container"

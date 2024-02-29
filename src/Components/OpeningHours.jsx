@@ -9,6 +9,39 @@ const OpeningHours = () => {
 
   const scaleY = useTransform(scrollYProgress, [0.2, 1], ["25%", "0%"]);
 
+  let hours = [
+    {
+      name: "Monday",
+      time: "CLOSED",
+    },
+    {
+      name: "Tuesday",
+      time: "11:00 - 22:00",
+    },
+    {
+      name: "Wednesday",
+      time: "11:00 - 22:00",
+    },
+    {
+      name: "Thursday",
+      time: "11:00 - 23:00",
+    },
+    {
+      name: "Friday",
+      time: "11:00 - 23:00",
+    },
+    {
+      name: "Saturday",
+      time: "12:00 - 23:00",
+    },
+    {
+      name: "Sunday",
+      time: "11:00 - 20:00",
+    },
+  ];
+
+  console.log(hours[1].name);
+
   return (
     <section className="opening-hours-container container">
       <div className="opening-hours-column-container ">
@@ -27,75 +60,79 @@ const OpeningHours = () => {
           </div>
           <div className="o-h-blurb-container">
             <h4>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
+              The story behind HAKKAPO is as unique as its name suggests.
+              Founded by three individuals, two originated from the HAKKA region
+              and one from POland.
             </h4>
-            <h4>
-              Bibendum ut tristique et egestas quis ipsum suspendisse ultrices
-              gravida. Nunc lobortis mattis aliquam faucibus purus in. Cursus
-              metus aliquam
+            <h4 className="sign-off-desktop">
+              So come, join us at HAKKAPO, where the essence of Japan meets the
+              spirit of Manchester.
             </h4>
           </div>
         </div>
         <div className="opening-hours-column center">
           <div className="o-h-title">
             <h2>Opening Hours</h2>
+            <motion.svg
+              className="green-circle"
+              width="247"
+              height="184"
+              viewBox="0 0 247 184"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                transition={{
+                  delay: 0.2,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+                d="M182.864 37.1463C133.016 5.45299 71.8489 11.6305 42.3347 27.404C19.6847 39.509 2.01282 66.4578 5.85037 104.613C8.66206 132.569 23.6972 169.033 93.5458 177.231C145.952 183.382 183.928 171.218 214.994 145.376C261.362 106.806 247.174 37.1463 171.171 5.45291"
+                stroke="#E4FF77"
+                strokeWidth="9.2311"
+                strokeLinecap="round"
+              />
+            </motion.svg>
           </div>
           <div className="o-h-times-container container">
-            <div className="o-h-times">
-              <motion.div
-                className="o-h-times-after"
-                initial={{ width: "100" }}
-                whileInView={{ width: "0%" }}
-                transition={{ delay: 0.75, duration: 0.5 }}
-              />
-              <h3>
-                <strong>Lunch</strong>
-              </h3>
-              <h3>11am - 1pm</h3>
-            </div>
-            <div className="o-h-times">
-              <motion.div
-                className="o-h-times-after"
-                initial={{ width: "100" }}
-                whileInView={{ width: "0%" }}
-                transition={{ delay: 0.5, duration: 0.75 }}
-              />
-
-              <h3>
-                <strong>Supper</strong>
-              </h3>
-              <h3>4pm - 11pm</h3>
-            </div>
+            {hours.map((index) => {
+              return (
+                <div className="o-h-times" key={index}>
+                  <motion.div
+                    className="o-h-times-after"
+                    initial={{ width: "100" }}
+                    whileInView={{ width: "0%" }}
+                    transition={{ delay: 0.5, duration: 0.75 }}
+                  />
+                  <h3>
+                    <strong>{index.name}</strong>
+                  </h3>
+                  <h3>{index.time}</h3>
+                </div>
+              );
+            })}
           </div>
-          <div className="o-h-day">
-            <h3>EVERYDAY</h3>
-          </div>
-          <motion.svg
-            className="green-circle"
-            width="247"
-            height="184"
-            viewBox="0 0 247 184"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <motion.path
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{
-                delay: 0.2,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              d="M182.864 37.1463C133.016 5.45299 71.8489 11.6305 42.3347 27.404C19.6847 39.509 2.01282 66.4578 5.85037 104.613C8.66206 132.569 23.6972 169.033 93.5458 177.231C145.952 183.382 183.928 171.218 214.994 145.376C261.362 106.806 247.174 37.1463 171.171 5.45291"
-              stroke="#E4FF77"
-              strokeWidth="9.2311"
-              strokeLinecap="round"
-            />
-          </motion.svg>
+          {/* <div className="o-h-day">
+            <h3>WELCOME</h3>
+          </div> */}
         </div>
         <div className="opening-hours-column right">
           <div className="o-h-img-container">
+            <div className="o-h-blurb-container">
+              <h4>
+                Nestled at the heart of First Street, one of Manchester’s most
+                vibrant neighbourhoods, HAKKAPO intend on bridging a relaxed and
+                refined dining space that is more than just a restaurant: it's a
+                celebration of Japanese culture and the heritage of its
+                founders.
+              </h4>
+              <h4 className="sign-off-mobile">
+                So come, join us at HAKKAPO, where the essence of Japan meets
+                the spirit of Manchester.
+              </h4>
+            </div>
             <motion.img
               src={Bowl}
               alt="noodle bowl"

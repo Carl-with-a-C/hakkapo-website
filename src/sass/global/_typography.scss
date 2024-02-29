@@ -35,7 +35,7 @@ p {
 }
 
 //DESKTOP
-@media (min-width: $layout-breakpoint-desktop) {
+@media (min-width: $layout-breakpoint-desktop-lrg) {
   h1 {
     font-size: var(--fs-144);
     font-family: var(--ff-heading);

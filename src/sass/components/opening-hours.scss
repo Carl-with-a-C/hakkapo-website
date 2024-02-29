@@ -15,6 +15,9 @@
 
 .left {
   align-self: start;
+  @media (max-width: $layout-breakpoint-tablet) {
+    padding-top: calc(var(--spacing-256));
+  }
 }
 
 .center {
@@ -25,7 +28,7 @@
     margin-top: -100px;
     @media (max-width: $layout-breakpoint-desktop) {
       width: 200px;
-      margin-top: -80px;
+      margin-top: -128px;
     }
   }
 }
@@ -39,7 +42,7 @@
 .o-h-times-container {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-32);
+  gap: var(--spacing-16);
   padding-bottom: var(--spacing-128);
 }
 
@@ -67,12 +70,6 @@
   background-color: $white;
 }
 
-.o-h-day {
-  h3 {
-    font-weight: 700;
-  }
-}
-
 .right {
   align-self: end;
 }
@@ -88,14 +85,15 @@
 }
 
 .o-h-blurb-container {
-  padding: var(--spacing-64) 0;
-  :nth-child(1) {
+  padding: var(--spacing-128) 0;
+  :nth-child(1),
+  :nth-child(2) {
     padding-bottom: var(--spacing-32);
   }
 }
 
-.green-circle {
-}
+// .green-circle {
+// }
 
 .love-doodle-img-container {
   display: flex;
@@ -104,5 +102,17 @@
     img {
       width: 100%;
     }
+  }
+}
+
+.sign-off-desktop {
+  @media (max-width: $layout-breakpoint-tablet) {
+    display: none;
+  }
+}
+
+@media (min-width: $layout-breakpoint-tablet) {
+  .sign-off-mobile {
+    display: none;
   }
 }
