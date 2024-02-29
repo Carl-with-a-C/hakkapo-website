@@ -26,15 +26,22 @@
   }
 }
 
+.hero-address-container {
+  padding-top: var(--spacing-16);
+  @media (min-width: $layout-breakpoint-tablet) {
+    display: none;
+  }
+}
+
 .blurb-container {
   display: flex;
-  padding-top: var(--spacing-128);
+  padding-top: var(--spacing-64);
   width: 65%;
   gap: var(--spacing-16);
   align-items: flex-start;
   @media (max-width: $layout-breakpoint-tablet) {
     flex-direction: column;
-    gap: var(--spacing-32);
+    gap: var(--spacing-64);
     width: 100%;
   }
 }

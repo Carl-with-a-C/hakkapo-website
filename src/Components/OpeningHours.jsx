@@ -60,13 +60,13 @@ const OpeningHours = () => {
           </div>
           <div className="o-h-blurb-container">
             <h4>
-              The story behind HAKKAPO is as unique as its name suggests.
-              Founded by three individuals, two originated from the HAKKA region
-              and one from POland.
+              The story behind <span>HAKKAPO</span> is as unique as its name
+              suggests. Founded by three individuals, two originated from the
+              <span>HAKKA</span> region and one from <span>PO</span>land.
             </h4>
             <h4 className="sign-off-desktop">
-              So come, join us at HAKKAPO, where the essence of Japan meets the
-              spirit of Manchester.
+              So come, join us at <span>HAKKAPO</span>, where the essence of
+              Japan meets the spirit of Manchester.
             </h4>
           </div>
         </div>
@@ -114,23 +114,20 @@ const OpeningHours = () => {
               );
             })}
           </div>
-          {/* <div className="o-h-day">
-            <h3>WELCOME</h3>
-          </div> */}
         </div>
         <div className="opening-hours-column right">
           <div className="o-h-img-container">
             <div className="o-h-blurb-container">
               <h4>
                 Nestled at the heart of First Street, one of Manchester’s most
-                vibrant neighbourhoods, HAKKAPO intend on bridging a relaxed and
-                refined dining space that is more than just a restaurant: it's a
-                celebration of Japanese culture and the heritage of its
+                vibrant neighbourhoods, <span>HAKKAPO</span> brings a relaxed
+                and refined dining space that is more than just a restaurant:
+                it's a celebration of Japanese culture and the heritage of its
                 founders.
               </h4>
               <h4 className="sign-off-mobile">
-                So come, join us at HAKKAPO, where the essence of Japan meets
-                the spirit of Manchester.
+                So come, join us at <span>HAKKAPO</span>, where the essence of
+                Japan meets the spirit of Manchester.
               </h4>
             </div>
             <motion.img

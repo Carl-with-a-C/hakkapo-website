@@ -85,15 +85,15 @@
 }
 
 .o-h-blurb-container {
+  span {
+    font-weight: 700;
+  }
   padding: var(--spacing-128) 0;
   :nth-child(1),
   :nth-child(2) {
     padding-bottom: var(--spacing-32);
   }
 }
-
-// .green-circle {
-// }
 
 .love-doodle-img-container {
   display: flex;
