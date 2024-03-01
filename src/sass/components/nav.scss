@@ -36,34 +36,6 @@
   }
 }
 
-// .drinks-btn-container {
-//   overflow: hidden;
-//   position: absolute;
-//   left: 0;
-//   top: 40vh;
-//   @media (min-width: $layout-breakpoint-tablet) {
-//     display: none;
-//   }
-// }
-
-// .drinks-menu-btn {
-//   border: 1px solid $black;
-//   background: $white;
-//   height: calc(var(--spacing-256) * 1.2);
-//   width: var(--spacing-64);
-//   color: $black;
-//   h4 {
-//     margin-left: -4px;
-//     writing-mode: vertical-rl;
-//     -webkit-text-orientation: upright;
-//     text-orientation: upright;
-//     line-height: 1;
-//   }
-//   @media (min-width: $layout-breakpoint-tablet) {
-//     display: none;
-//   }
-// }
-
 .nav-container {
   padding-top: var(--spacing-32);
   width: 100vw;
@@ -88,6 +60,10 @@
 }
 
 .nav-link {
+  a {
+    color: $off-black;
+    text-decoration: none;
+  }
   button {
     border: none;
     background-color: transparent;

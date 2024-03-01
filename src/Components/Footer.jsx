@@ -2,7 +2,7 @@ import { footerLinks } from "../Data/constants";
 
 const Footer = () => {
   return (
-    <footer className="footer-container container">
+    <footer className="footer-container container" id="footer">
       <div className="footer-links--container">
         {footerLinks.map((link, index) => {
           return (

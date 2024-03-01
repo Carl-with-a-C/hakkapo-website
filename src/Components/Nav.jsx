@@ -64,7 +64,9 @@ const Nav = ({ setMenuOpen, menuOpen, drinksOpen, isLoading }) => {
           transition={{ delay: 2.2, duration: 0.75 }}
         >
           <div className="nav-link contact-link">
-            <p>contact us</p>
+            <a href="#footer">
+              <p>contact us</p>
+            </a>
           </div>
           <div className="nav-link menu-link">
             <button
