@@ -1,26 +1,24 @@
-import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 
-import Table from "../Multimedia/Images/menu-wood.jpg";
+import Table from "../Multimedia/Images/drinks-wood.jpg";
 
 import ArrowR from "../Multimedia/Vectors/ArrowR.svg";
 import ArrowL from "../Multimedia/Vectors/ArrowL.svg";
 
-import BaoMenu from "../Multimedia/Vectors/MenuSVGs/BaoBox.svg";
-import DonburiMenu from "../Multimedia/Vectors/MenuSVGs/DonburiBox.svg";
-import RamenMenu from "../Multimedia/Vectors/MenuSVGs/RamenBox.svg";
-import SidesMenu from "../Multimedia/Vectors/MenuSVGs/SidesBox.svg";
-import SPMenu from "../Multimedia/Vectors/MenuSVGs/SPBox.svg";
-import DessertMenu from "../Multimedia/Vectors/MenuSVGs/DessertBox.svg";
+import Wine1 from "../Multimedia/Vectors/DrinksSVGs/wine1.svg";
+import Wine2 from "../Multimedia/Vectors/DrinksSVGs/wine2.svg";
+import Sake from "../Multimedia/Vectors/DrinksSVGs/sake.svg";
+import Spirits from "../Multimedia/Vectors/DrinksSVGs/spirits.svg";
+import Beer from "../Multimedia/Vectors/DrinksSVGs/beer.svg";
 
 const Images = [
-  { image: BaoMenu, title: "bao" },
-  { image: DonburiMenu, title: "donburi" },
-  { image: RamenMenu, title: "ramen" },
-  { image: SidesMenu, title: "sides" },
-  { image: SPMenu, title: "small plates" },
-  { image: DessertMenu, title: "dessert" },
+  { image: Wine1, title: "wine/WHITE" },
+  { image: Wine2, title: "wine/RED" },
+  { image: Sake, title: "sake" },
+  { image: Spirits, title: "highballs & spirits" },
+  { image: Beer, title: "beer & softs" },
 ];
 
 const variants = {
@@ -55,10 +53,10 @@ const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
 
-const Menu = ({ setMenuOpen, menuOpen, setDrinksOpen, drinksOpen }) => {
+const Drinks = ({ setDrinksOpen, drinksOpen, setMenuOpen, menuOpen }) => {
   const [[page, direction], setPage] = useState([0, 0]);
 
-  // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
+  // We only have 5 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
   // then wrap that within 0-2 to find our image ID in the array below. By passing an
   // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
   // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
@@ -69,65 +67,65 @@ const Menu = ({ setMenuOpen, menuOpen, setDrinksOpen, drinksOpen }) => {
   };
 
   return (
-    <section className="menu ">
+    <section className="drinks">
       <motion.div
-        className="table-container "
+        className="table-container"
         initial={{ x: "100%" }}
-        animate={{ x: menuOpen ? "0%" : "100%" }}
+        animate={{ x: drinksOpen ? "0%" : "100%" }}
         transition={{ duration: 0.75, ease: [0.78, 0.01, 0.21, 1] }}
       >
-        <motion.h2 className="food-title">FOOD</motion.h2>
+        <motion.h1 className="drinks-title">DRINKS</motion.h1>
         <div className="buttons-container container">
           <motion.button
-            className="drinks-btn btn"
+            className="food-btn btn"
             onClick={() => {
               setMenuOpen(!menuOpen);
               setDrinksOpen(!drinksOpen);
             }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: menuOpen ? 1 : 0 }}
+            animate={{ opacity: drinksOpen ? 1 : 0 }}
             transition={{
               delay: 1,
               duration: 0.75,
               ease: [0.78, 0.01, 0.21, 1],
             }}
           >
-            <motion.h3 whileTap={{ scale: 0.85 }}>{"< "}drinks</motion.h3>
+            <motion.h3 whileTap={{ scale: 0.9 }}>{"< "}food</motion.h3>
           </motion.button>
           <motion.button
             className="close-btn btn"
             onClick={() => {
-              setMenuOpen(!menuOpen);
+              setDrinksOpen(!drinksOpen);
             }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: menuOpen ? 1 : 0 }}
+            animate={{ opacity: drinksOpen ? 1 : 0 }}
             transition={{
               delay: 1,
               duration: 0.75,
               ease: [0.78, 0.01, 0.21, 1],
             }}
           >
-            <motion.h4 whileTap={{ scale: 0.85 }}>close x</motion.h4>
+            <motion.h4 whileTap={{ scale: 0.9 }}>close x</motion.h4>
           </motion.button>
         </div>
         <img src={Table} alt="wodden table surface" />
       </motion.div>
       <div
-        className="menu-container"
-        style={{ visibility: menuOpen ? "visible" : "hidden" }}
+        className="drinks-container"
+        style={{ visibility: drinksOpen ? "visible" : "hidden" }}
       >
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
-            className="menu-card-container"
+            className="drinks-card-container"
             initial={{ y: "100%" }}
-            animate={{ y: menuOpen ? "0%" : "100%" }}
+            animate={{ y: drinksOpen ? "0%" : "100%" }}
             transition={{
               duration: 0.75,
               ease: [0.78, 0.01, 0.21, 1],
             }}
           >
             <motion.img
-              className={Images[imageIndex].title + ` menu-card`}
+              className={Images[imageIndex].title + ` drinks-card`}
               key={page}
               src={Images[imageIndex].image}
               custom={direction}
@@ -154,13 +152,13 @@ const Menu = ({ setMenuOpen, menuOpen, setDrinksOpen, drinksOpen }) => {
             />
           </motion.div>
         </AnimatePresence>
-        <div className="menu-pagination-container container">
-          <ul className="menu-pagination">
+        <div className="drinks-pagination-container container">
+          <ul className="drinks-pagination">
             {Images.map((image, index) => (
               <li
                 key={index}
                 className={
-                  imageIndex === index ? "active menu-page" : "menu-page"
+                  imageIndex === index ? "active drinks-page" : "drinks-page"
                 }
               >
                 <button onClick={() => setPage([index, direction])}>
@@ -191,4 +189,4 @@ const Menu = ({ setMenuOpen, menuOpen, setDrinksOpen, drinksOpen }) => {
   );
 };
 
-export default Menu;
+export default Drinks;

@@ -1,14 +1,30 @@
-.menu {
+.drinks {
   position: relative;
   z-index: 20;
 }
 
+.drinks-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: $off-black;
+  opacity: 0.25;
+  z-index: 20;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  text-shadow: 2px 0 $white;
+  font-size: calc(90vw / 3);
+}
+
 .table-container {
   position: fixed;
-  bottom: 0;
+  top: 0;
   height: 100vh;
   img {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
   }
   .btn {
@@ -17,32 +33,19 @@
     background-color: transparent;
     color: $white;
     border: none;
+    h3 {
+      font-weight: 700;
+    }
   }
   .close-btn {
     right: var(--spacing-32);
   }
-  .drinks-btn {
+  .food-btn {
     left: var(--spacing-32);
   }
 }
 
-.food-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  color: $black;
-  opacity: 0.35;
-  z-index: 20;
-  width: -moz-fit-content;
-  width: fit-content;
-  text-align: center;
-  text-shadow: 2px 0 orange;
-  font-size: calc(90vw / 3);
-}
-
-.menu-container {
+.drinks-container {
   position: fixed;
   bottom: 0;
   top: 0;
@@ -51,51 +54,30 @@
   width: 100vw;
 }
 
-.menu-card-container {
+.drinks-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.menu-card {
-  width: 400px;
+.drinks-card {
+  width: 250px;
   margin: 0 auto;
   &:hover,
   :focus {
     transform: translateY(-50px);
-    scale: 1.05;
+    scale: 1.1;
     transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.75s;
   }
   @media (max-width: $layout-breakpoint-tablet) {
     width: 60%;
   }
   @media (max-width: $layout-breakpoint-mobile) {
-    width: 80%;
+    width: 65%;
   }
 }
 
-.ramen {
-  width: 230px;
-}
-
-.plates {
-  width: 280px;
-  @media (max-width: $layout-breakpoint-tablet) {
-    width: 45%;
-  }
-  @media (max-width: $layout-breakpoint-mobile) {
-    width: 70%;
-  }
-}
-
-.dessert {
-  width: 500px;
-  @media (max-width: $layout-breakpoint-tablet) {
-    width: 85%;
-  }
-}
-
-.menu-pagination-container {
+.drinks-pagination-container {
   position: fixed;
   width: -moz-fit-content;
   width: fit-content;
@@ -108,7 +90,7 @@
   }
 }
 
-.menu-pagination {
+.drinks-pagination {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-16);
@@ -117,7 +99,7 @@
   align-items: center;
 }
 
-.menu-page {
+.drinks-page {
   opacity: 80%;
   button {
     background: none;
