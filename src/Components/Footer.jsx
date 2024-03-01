@@ -12,7 +12,11 @@ const Footer = () => {
                 {link.links.map((item, index) => {
                   return (
                     <li key={index}>
-                      <a href={link.urls[index]}>
+                      <a
+                        href={link.urls[index]}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <h4 className="footer-links">{item}</h4>
                       </a>
                     </li>
