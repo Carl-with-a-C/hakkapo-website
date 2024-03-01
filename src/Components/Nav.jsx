@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import HeaderLogo from "../Multimedia/Vectors/HakkapoWordmark.svg";
 
-const Nav = ({ setMenuOpen, menuOpen, isLoading }) => {
+const Nav = ({ setMenuOpen, menuOpen, drinksOpen, isLoading }) => {
   return (
     <header className="header">
       <div className="nav-container container">
@@ -53,7 +53,7 @@ const Nav = ({ setMenuOpen, menuOpen, isLoading }) => {
           <motion.img
             src={HeaderLogo}
             alt="Hakkapo Logo"
-            animate={{ y: menuOpen ? "-150%" : "0" }}
+            animate={{ y: menuOpen || drinksOpen ? "-150%" : "0" }}
             transition={{ duration: 0.75, ease: [0.78, 0.01, 0.21, 1] }}
           />
         </motion.div>
