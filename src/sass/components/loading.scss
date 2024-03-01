@@ -6,4 +6,16 @@
   justify-content: center;
   align-items: center;
   transition: all 0.2s duration 2s ease;
+  overflow: hidden;
+}
+
+.skater-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 200px;
+  margin: auto;
+  width: 200px;
+  height: 200px;
 }

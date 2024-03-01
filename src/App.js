@@ -3,6 +3,7 @@ import Hero from "./Components/Hero";
 import "./sass/main.scss";
 import OpeningHours from "./Components/OpeningHours";
 import Menu from "./Components/Menu";
+import Footer from "./Components/Footer";
 
 import { useEffect, useState } from "react";
 import Loading from "./Components/Loading";
@@ -15,7 +16,7 @@ function App() {
     // Simulate an API call
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2000);
   }, []);
 
   if (isLoading) {
@@ -32,6 +33,7 @@ function App() {
       <Hero />
       <OpeningHours />
       <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
+      <Footer />
     </div>
   );
 }
