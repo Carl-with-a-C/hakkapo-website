@@ -16,6 +16,7 @@ $layout-breakpoint-mobile: 480px;
   --spacing-64: calc(6.4 * var(--spacing-unit));
   --spacing-32: calc(3.2 * var(--spacing-unit));
   --spacing-16: calc(1.6 * var(--spacing-unit));
+  --spacing-8: calc(0.8 * var(--spacing-unit));
 
   @media (max-width: $layout-breakpoint-desktop-lrg) {
     --spacing-unit: 7.5px;

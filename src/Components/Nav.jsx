@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import HeaderLogo from "../Multimedia/Vectors/HakkapoWordmark.svg";
 
 const Nav = ({ setMenuOpen, menuOpen, isLoading }) => {
-  console.log(menuOpen);
   return (
     <header className="header">
       <div className="nav-container container">

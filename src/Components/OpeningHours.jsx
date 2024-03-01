@@ -40,8 +40,6 @@ const OpeningHours = () => {
     },
   ];
 
-  console.log(hours[1].name);
-
   return (
     <section className="opening-hours-container container">
       <div className="opening-hours-column-container ">
@@ -99,7 +97,7 @@ const OpeningHours = () => {
           <div className="o-h-times-container container">
             {hours.map((index) => {
               return (
-                <div className="o-h-times" key={index}>
+                <div className="o-h-times" key={index.name}>
                   <motion.div
                     className="o-h-times-after"
                     initial={{ width: "100" }}

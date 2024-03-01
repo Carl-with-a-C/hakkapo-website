@@ -1,0 +1,23 @@
+.footer-container {
+  padding-top: var(--spacing-64);
+  padding-bottom: var(--spacing-64);
+  background-color: $off-black;
+  color: $white;
+}
+
+.footer-links--container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-16);
+  @media (min-width: $layout-breakpoint-tablet) {
+    width: 50%;
+    justify-content: space-between;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    h4 {
+      font-weight: 700;
+    }
+  }
+}
