@@ -1,10 +1,10 @@
 .loading-screen--container {
   background-color: $white;
   height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: var(--spacing-32);
   transition: all 0.2s duration 2s ease;
   overflow: hidden;
 }
@@ -18,4 +18,19 @@
   margin: auto;
   width: 200px;
   height: 200px;
+}
+
+.progress-bar--container {
+  border: 1px $off-black solid;
+  width: 33vw;
+}
+
+.progress-bar {
+  // position: absolute;
+  bottom: var(--spacing-32);
+  left: 33vw;
+  right: 0;
+  height: 10px;
+  background: $off-black;
+  transform-origin: 0%;
 }

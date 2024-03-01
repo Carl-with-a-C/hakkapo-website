@@ -61,7 +61,7 @@
 }
 
 .drinks-card {
-  width: 250px;
+  width: 260px;
   margin: 0 auto;
   &:hover,
   :focus {
@@ -70,7 +70,7 @@
     transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.75s;
   }
   @media (max-width: $layout-breakpoint-tablet) {
-    width: 60%;
+    width: 40%;
   }
   @media (max-width: $layout-breakpoint-mobile) {
     width: 65%;
