@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 
 import heroSplash from "../Multimedia/Images/HakkapoHeroSplash.png";
 import jumpingVectorBody from "../Multimedia/Vectors/body.svg";
@@ -17,11 +17,13 @@ const Hero = () => {
 
   return (
     <section className="hero-container">
-      <motion.div
+      <m.div
         className="hero-img-container container"
         style={{ scale: scaleYImg }}
       >
-        <motion.img
+        <m.img
+          loading="lazy"
+          role="presentation"
           src={heroSplash}
           alt="a light and airy restaurant"
           animate={{ height: "70vh", filter: "brightness(100%)" }}
@@ -32,8 +34,8 @@ const Hero = () => {
             ease: [0.78, 0.01, 0.21, 1],
           }}
         />
-      </motion.div>
-      <motion.div
+      </m.div>
+      <m.div
         className="lower-hero-container"
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
@@ -60,32 +62,32 @@ const Hero = () => {
           </div>
         </div>
         <div className="jumping-vector-container">
-          <motion.img
+          <m.img
             src={jumpingVectorBody}
             alt="line illustration of person dynamically jumping"
             className="jumping-vector jumping-vector--body"
             style={{ y: scaleY }}
           />
-          <motion.img
+          <m.img
             src={jumpingVectorBao}
             alt="line illustration of a bao bun"
             className="jumping-vector jumping-vector--bao"
             style={{ y: scaleY1 }}
           />
-          <motion.img
+          <m.img
             src={jumpingVectorBg}
             alt="line illustration of background shapes"
             className="jumping-vector jumping-vector--bg"
             style={{ y: scaleY2 }}
           />
-          <motion.img
+          <m.img
             src={jumpingVectorFg}
             alt="line illustration of foreground shapes"
             className="jumping-vector jumping-vector--fg"
             style={{ y: scaleY3 }}
           />
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 };

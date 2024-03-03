@@ -1,6 +1,30 @@
-.menu {
+.menu,
+.drinks {
   position: relative;
   z-index: 20;
+}
+
+.food-title,
+.drinks-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: $black;
+  opacity: 0.35;
+  z-index: 20;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  text-shadow: 2px 0 orange;
+  font-size: calc(90vw / 3);
+}
+
+.drinks-title {
+  color: $off-black;
+  opacity: 0.25;
+  text-shadow: 2px 0 $white;
 }
 
 .table-container {
@@ -17,32 +41,21 @@
     background-color: transparent;
     color: $white;
     border: none;
+    h3 {
+      font-weight: 700;
+    }
   }
   .close-btn {
     right: var(--spacing-32);
   }
-  .drinks-btn {
+  .drinks-btn,
+  .food-btn {
     left: var(--spacing-32);
   }
 }
 
-.food-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  color: $black;
-  opacity: 0.35;
-  z-index: 20;
-  width: -moz-fit-content;
-  width: fit-content;
-  text-align: center;
-  text-shadow: 2px 0 orange;
-  font-size: calc(90vw / 3);
-}
-
-.menu-container {
+.menu-container,
+.drinks-container {
   position: fixed;
   bottom: 0;
   top: 0;
@@ -51,26 +64,36 @@
   width: 100vw;
 }
 
-.menu-card-container {
+.menu-card-container,
+.drinks-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.menu-card {
+.menu-card,
+.drinks-card {
   width: 400px;
   margin: 0 auto;
   &:hover,
-  :focus {
-    transform: translateY(-50px);
-    scale: (1.1);
-    transition: cubic-bezier(0.78, 0.01, 0.21, 1) 0.75s;
+  &:focus {
+    scale: 1.1;
   }
   @media (max-width: $layout-breakpoint-tablet) {
     width: 60%;
   }
   @media (max-width: $layout-breakpoint-mobile) {
     width: 80%;
+  }
+}
+
+.drinks-card {
+  width: 260px;
+  @media (max-width: $layout-breakpoint-tablet) {
+    width: 40%;
+  }
+  @media (max-width: $layout-breakpoint-mobile) {
+    width: 65%;
   }
 }
 
@@ -95,7 +118,8 @@
   }
 }
 
-.menu-pagination-container {
+.menu-pagination-container,
+.drinks-pagination-container {
   position: fixed;
   width: -moz-fit-content;
   width: fit-content;
@@ -108,7 +132,8 @@
   }
 }
 
-.menu-pagination {
+.menu-pagination,
+.drinks-pagination {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-16);
@@ -117,7 +142,8 @@
   align-items: center;
 }
 
-.menu-page {
+.menu-page,
+.drinks-page {
   opacity: 80%;
   button {
     background: none;

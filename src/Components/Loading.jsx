@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import Skater from "../Multimedia/Vectors/Illustration3.svg";
 
 const variants = {
@@ -14,14 +14,14 @@ const Loading = ({ isLoading }) => {
   const duration = 2000;
   return (
     <AnimatePresence>
-      <motion.div
+      <m.div
         className="loading-screen--container container"
         key="load-exit"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, duration: 0.5 }}
       >
-        <motion.h2
+        <m.h2
           initial={{ scale: 1 }}
           animate={{ scale: 0 }}
           transition={{
@@ -31,9 +31,9 @@ const Loading = ({ isLoading }) => {
           }}
         >
           Loading
-        </motion.h2>
+        </m.h2>
         <div className="progress-bar--container">
-          <motion.div
+          <m.div
             className="progress-bar"
             animate={{ width: "33vw" }}
             variants={variants}
@@ -43,11 +43,11 @@ const Loading = ({ isLoading }) => {
               duration: duration / 1000,
               delay: 0.3,
             }}
-          ></motion.div>
+          ></m.div>
         </div>
-        <motion.div>
+        <m.div>
           <AnimatePresence>
-            <motion.img
+            <m.img
               className="skater-img"
               key="skater"
               src={Skater}
@@ -62,8 +62,8 @@ const Loading = ({ isLoading }) => {
               exit={{ opacity: 0 }}
             />
           </AnimatePresence>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </AnimatePresence>
   );
 };

@@ -26,6 +26,13 @@ const Footer = () => {
             </div>
           );
         })}
+        <div className="footer-links--buztek">
+          <a href="https://buztek.co" target="_blank" rel="noreferrer">
+            <p className="buztek">
+              <span className="bold">Buztek Ltd</span> 2024 all rights reserved
+            </p>
+          </a>
+        </div>
       </div>
     </footer>
   );
