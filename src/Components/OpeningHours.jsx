@@ -1,7 +1,7 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 
-import Drink from "../Multimedia/Images/HakkapoDrink.png";
-import Bowl from "../Multimedia/Images/HakkapoBowl.png";
+import Drink from "../Multimedia/Images/Seating.png";
+import Bowl from "../Multimedia/Images/Fries.png";
 import Love from "../Multimedia/Vectors/LovingDoodle.svg";
 
 const OpeningHours = () => {
@@ -45,7 +45,7 @@ const OpeningHours = () => {
       <div className="opening-hours-column-container ">
         <div className="opening-hours-column left">
           <div className="o-h-img-container">
-            <motion.img
+            <m.img
               src={Drink}
               alt="fancy cocktail"
               whileInView={{ scale: 1.1 }}
@@ -59,7 +59,7 @@ const OpeningHours = () => {
           <div className="o-h-blurb-container">
             <h4>
               The story behind <span>HAKKAPO</span> is as unique as its name
-              suggests. Founded by three individuals, two originated from the
+              suggests. Founded by three individuals, two originated from the{" "}
               <span>HAKKA</span> region and one from <span>PO</span>land.
             </h4>
             <h4 className="sign-off-desktop">
@@ -71,7 +71,7 @@ const OpeningHours = () => {
         <div className="opening-hours-column center">
           <div className="o-h-title">
             <h2>Opening Hours</h2>
-            <motion.svg
+            <m.svg
               className="green-circle"
               width="247"
               height="184"
@@ -79,7 +79,7 @@ const OpeningHours = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <motion.path
+              <m.path
                 initial={{ pathLength: 0 }}
                 whileInView={{ pathLength: 1 }}
                 transition={{
@@ -92,13 +92,13 @@ const OpeningHours = () => {
                 strokeWidth="9.2311"
                 strokeLinecap="round"
               />
-            </motion.svg>
+            </m.svg>
           </div>
           <div className="o-h-times-container container">
             {hours.map((index) => {
               return (
                 <div className="o-h-times" key={index.name}>
-                  <motion.div
+                  <m.div
                     className="o-h-times-after"
                     initial={{ width: "100" }}
                     whileInView={{ width: "0%" }}
@@ -128,7 +128,8 @@ const OpeningHours = () => {
                 Japan meets the spirit of Manchester.
               </h4>
             </div>
-            <motion.img
+            <m.img
+              loading="lazy"
               src={Bowl}
               alt="noodle bowl"
               whileInView={{ scale: 1.1 }}
@@ -142,7 +143,8 @@ const OpeningHours = () => {
         </div>
       </div>
       <div className="love-doodle-img-container">
-        <motion.img
+        <m.img
+          loading="lazy"
           src={Love}
           alt="person lovingly holding a bao bun"
           style={{ y: scaleY }}

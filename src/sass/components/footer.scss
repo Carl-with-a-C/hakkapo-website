@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-16);
+  padding-bottom: var(--spacing-258);
   @media (min-width: $layout-breakpoint-tablet) {
     width: 50%;
     justify-content: space-between;
@@ -20,4 +21,13 @@
       font-weight: 700;
     }
   }
+}
+
+.footer-links--buztek {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  right: var(--spacing-16);
+  bottom: var(--spacing-16);
 }

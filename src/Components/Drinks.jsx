@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 
 import Table from "../Multimedia/Images/drinks-wood.jpg";
@@ -68,15 +68,15 @@ const Drinks = ({ setDrinksOpen, drinksOpen, setMenuOpen, menuOpen }) => {
 
   return (
     <section className="drinks">
-      <motion.div
+      <m.div
         className="table-container"
         initial={{ x: "100%" }}
         animate={{ x: drinksOpen ? "0%" : "100%" }}
         transition={{ duration: 0.75, ease: [0.78, 0.01, 0.21, 1] }}
       >
-        <motion.h1 className="drinks-title">DRINKS</motion.h1>
+        <m.h1 className="drinks-title">DRINKS</m.h1>
         <div className="buttons-container container">
-          <motion.button
+          <m.button
             className="food-btn btn"
             onClick={() => {
               setMenuOpen(!menuOpen);
@@ -90,9 +90,9 @@ const Drinks = ({ setDrinksOpen, drinksOpen, setMenuOpen, menuOpen }) => {
               ease: [0.78, 0.01, 0.21, 1],
             }}
           >
-            <motion.h3 whileTap={{ scale: 0.9 }}>{"< "}food</motion.h3>
-          </motion.button>
-          <motion.button
+            <m.h3 whileTap={{ scale: 0.9 }}>{"< "}food</m.h3>
+          </m.button>
+          <m.button
             className="close-btn btn"
             onClick={() => {
               setDrinksOpen(!drinksOpen);
@@ -105,17 +105,17 @@ const Drinks = ({ setDrinksOpen, drinksOpen, setMenuOpen, menuOpen }) => {
               ease: [0.78, 0.01, 0.21, 1],
             }}
           >
-            <motion.h4 whileTap={{ scale: 0.9 }}>close x</motion.h4>
-          </motion.button>
+            <m.h4 whileTap={{ scale: 0.9 }}>close x</m.h4>
+          </m.button>
         </div>
         <img src={Table} alt="wodden table surface" />
-      </motion.div>
+      </m.div>
       <div
         className="drinks-container"
         style={{ visibility: drinksOpen ? "visible" : "hidden" }}
       >
         <AnimatePresence initial={false} custom={direction}>
-          <motion.div
+          <m.div
             className="drinks-card-container"
             initial={{ y: "100%" }}
             animate={{ y: drinksOpen ? "0%" : "100%" }}
@@ -124,7 +124,7 @@ const Drinks = ({ setDrinksOpen, drinksOpen, setMenuOpen, menuOpen }) => {
               ease: [0.78, 0.01, 0.21, 1],
             }}
           >
-            <motion.img
+            <m.img
               className={Images[imageIndex].title + ` drinks-card`}
               key={page}
               src={Images[imageIndex].image}
@@ -150,7 +150,7 @@ const Drinks = ({ setDrinksOpen, drinksOpen, setMenuOpen, menuOpen }) => {
                 }
               }}
             />
-          </motion.div>
+          </m.div>
         </AnimatePresence>
         <div className="drinks-pagination-container container">
           <ul className="drinks-pagination">
@@ -170,14 +170,14 @@ const Drinks = ({ setDrinksOpen, drinksOpen, setMenuOpen, menuOpen }) => {
         </div>
         <div className="navigation-btns--container">
           <div className="prev navigation-btns" onClick={() => paginate(-1)}>
-            <motion.img
+            <m.img
               src={ArrowL}
               alt="arrow pointing left"
               whileTap={{ scale: 0.9 }}
             />
           </div>
           <div className="next navigation-btns" onClick={() => paginate(1)}>
-            <motion.img
+            <m.img
               src={ArrowR}
               alt="arrow pointing right"
               whileTap={{ scale: 0.9 }}
