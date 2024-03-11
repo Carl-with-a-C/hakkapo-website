@@ -16,19 +16,19 @@ const OpeningHours = () => {
     },
     {
       name: "Tuesday",
-      time: "11:00 - 22:00",
+      time: "12:00 - 22:00",
     },
     {
       name: "Wednesday",
-      time: "11:00 - 22:00",
+      time: "12:00 - 22:00",
     },
     {
       name: "Thursday",
-      time: "11:00 - 23:00",
+      time: "12:00 - 23:00",
     },
     {
       name: "Friday",
-      time: "11:00 - 23:00",
+      time: "12:00 - 23:00",
     },
     {
       name: "Saturday",
@@ -36,7 +36,7 @@ const OpeningHours = () => {
     },
     {
       name: "Sunday",
-      time: "11:00 - 20:00",
+      time: "12:00 - 20:00",
     },
   ];
 

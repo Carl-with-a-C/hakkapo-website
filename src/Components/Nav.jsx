@@ -1,7 +1,14 @@
 import { m } from "framer-motion";
 import HeaderLogo from "../Multimedia/Vectors/HakkapoWordmark.svg";
 
-const Nav = ({ setMenuOpen, menuOpen, drinksOpen, isLoading }) => {
+const Nav = ({
+  setMenuOpen,
+  menuOpen,
+  drinksOpen,
+  isLoading,
+  setBookingOpen,
+  bookingOpen,
+}) => {
   return (
     <header className="header">
       <div className="nav-container container">
@@ -32,8 +39,25 @@ const Nav = ({ setMenuOpen, menuOpen, drinksOpen, isLoading }) => {
           initial={{ opacity: 0 }}
           transition={{ delay: 2.2, duration: 0.75 }}
         >
+          <button
+            className="res-btn"
+            onClick={() => {
+              setBookingOpen(!bookingOpen);
+            }}
+          >
+            <h3 className="reservations-btn-nav">Reserve Table</h3>
+          </button>
+
           <p>13 Jack Rosenthal St, Manchester M15 4FN</p>
         </m.div>
+        <button
+          className="reservations-btn-mob"
+          onClick={() => {
+            setBookingOpen(!bookingOpen);
+          }}
+        >
+          <h3>Reserve Table</h3>
+        </button>
         <m.div
           className="logo-container"
           animate={

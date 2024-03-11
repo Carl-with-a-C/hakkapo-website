@@ -49,6 +49,41 @@
   align-items: end;
 }
 
+.res-btn {
+  background: none;
+  border: none;
+  z-index: 20;
+}
+
+.reservations-btn-nav {
+  background-color: $off-black;
+  color: $white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 var(--spacing-16);
+  border: 2px solid $off-black;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: var(--spacing-16);
+  z-index: 20;
+}
+
+.reservations-btn-mob {
+  background-color: $off-black;
+  color: $white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 var(--spacing-16);
+  border: 2px solid $off-black;
+  font-weight: 500;
+  position: fixed;
+  top: var(--spacing-128);
+  left: -8px;
+  @media (min-width: $layout-breakpoint-tablet) {
+    display: none;
+  }
+}
+
 .logo-container {
   opacity: 0;
   justify-self: center;

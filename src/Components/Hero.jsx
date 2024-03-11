@@ -88,25 +88,6 @@ const Hero = () => {
           />
         </div>
       </m.div>
-      <div
-        id="rd-widget-frame"
-        style={{
-          maxWidth: "600px",
-          margin: "auto",
-        }}
-      ></div>
-
-      <input
-        id="rdwidgeturl"
-        name="rdwidgeturl"
-        value="https://booking.resdiary.com/widget/Standard/HakkaPo/48590?includeJquery=false"
-        type="hidden"
-      />
-      <script
-        type="text/javascript"
-        src="https://booking.resdiary.com/bundles/WidgetV2Loader.js"
-      ></script>
-      {console.log(document.getElementById("rdwidgeturl"))}
     </section>
   );
 };

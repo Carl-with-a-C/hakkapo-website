@@ -1,0 +1,27 @@
+.booking-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.booking-close-btn {
+  position: fixed;
+  top: var(--spacing-16);
+  left: var(--spacing-16);
+  background: none;
+  border: none;
+  color: $white;
+  h4 {
+    font-weight: 700;
+  }
+}

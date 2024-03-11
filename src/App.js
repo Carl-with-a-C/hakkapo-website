@@ -10,11 +10,14 @@ import { useEffect, useState } from "react";
 import Loading from "./Components/Loading";
 
 import { LazyMotion, domAnimation, domMax } from "framer-motion";
+import Booking from "./Components/Booking";
+// import { Helmet } from "react-helmet";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [drinksOpen, setDrinksOpen] = useState(false);
+  const [bookingOpen, setBookingOpen] = useState(false);
 
   useEffect(() => {
     // Simulate an API call
@@ -35,6 +38,8 @@ function App() {
     <div className="App">
       <LazyMotion features={domMax}>
         <Nav
+          setBookingOpen={setBookingOpen}
+          bookingOpen={bookingOpen}
           setMenuOpen={setMenuOpen}
           menuOpen={menuOpen}
           drinksOpen={drinksOpen}
@@ -54,6 +59,8 @@ function App() {
           setMenuOpen={setMenuOpen}
           menuOpen={menuOpen}
         />
+        <Booking bookingOpen={bookingOpen} setBookingOpen={setBookingOpen} />
+
         <Footer />
       </LazyMotion>
     </div>
