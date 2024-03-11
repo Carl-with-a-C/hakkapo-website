@@ -16,23 +16,6 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [drinksOpen, setDrinksOpen] = useState(false);
 
-  // const someRequest = () => {
-  //   //Simulates a request; makes a "promise" that'll run for 2.5 seconds
-  //   return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-  // };
-
-  // useEffect(() => {
-  //   someRequest().then(() => {
-  //     const loaderElement = document.querySelector(
-  //       ".loading-screen--container"
-  //     );
-  //     if (loaderElement) {
-  //       loaderElement.remove();
-  //       setIsLoading(false);
-  //     }
-  //   });
-  // }, []);
-
   useEffect(() => {
     // Simulate an API call
     setTimeout(() => {

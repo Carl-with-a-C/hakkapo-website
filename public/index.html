@@ -29,6 +29,30 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div
+      id="rd-widget-frame"
+      style="
+        max-width: 600px;
+        margin: auto;
+        position: fixed;
+        bottom: 16px;
+        left: 16px;
+        z-index: 999;
+      "
+    ></div>
+
+    <input
+      id="rdwidgeturl"
+      name="rdwidgeturl"
+      value="https://booking.resdiary.com/widget/Standard/HakkaPo/48590?includeJquery=false"
+      type="hidden"
+      target="_blank"
+      rel="noopener noreferrer"
+    />
+    <script
+      type="text/javascript"
+      src="https://booking.resdiary.com/bundles/WidgetV2Loader.js"
+    ></script>
     <div id="root"></div>
     <!--
       This HTML file is a template.

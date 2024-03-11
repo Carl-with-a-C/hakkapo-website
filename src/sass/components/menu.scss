@@ -7,24 +7,12 @@
 .food-title,
 .drinks-title {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  color: $black;
-  opacity: 0.35;
-  z-index: 20;
-  width: -moz-fit-content;
-  width: fit-content;
-  text-align: center;
-  text-shadow: 2px 0 orange;
-  font-size: calc(90vw / 3);
-}
-
-.drinks-title {
-  color: $off-black;
-  opacity: 0.25;
-  text-shadow: 2px 0 $white;
+  top: 10%;
+  z-index: 19;
+  mix-blend-mode: difference;
+  @media (max-width: $layout-breakpoint-mobile) {
+    bottom: 0;
+  }
 }
 
 .table-container {

@@ -30,6 +30,9 @@
     writing-mode: vertical-rl;
     -webkit-text-orientation: upright;
     text-orientation: upright;
+    padding-right: 32px;
+    line-height: 1.2;
+    font-weight: 600;
   }
   @media (min-width: $layout-breakpoint-tablet) {
     display: none;

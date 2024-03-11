@@ -12,6 +12,7 @@ import Wine2 from "../Multimedia/Vectors/DrinksSVGs/wine2.svg";
 import Sake from "../Multimedia/Vectors/DrinksSVGs/sake.svg";
 import Spirits from "../Multimedia/Vectors/DrinksSVGs/spirits.svg";
 import Beer from "../Multimedia/Vectors/DrinksSVGs/beer.svg";
+import Group from "../Multimedia/Vectors/menu_illustration.svg";
 
 const Images = [
   { image: Wine1, title: "wine/WHITE" },
@@ -74,7 +75,11 @@ const Drinks = ({ setDrinksOpen, drinksOpen, setMenuOpen, menuOpen }) => {
         animate={{ x: drinksOpen ? "0%" : "100%" }}
         transition={{ duration: 0.75, ease: [0.78, 0.01, 0.21, 1] }}
       >
-        <m.h1 className="drinks-title">DRINKS</m.h1>
+        <m.img
+          className="drinks-title"
+          src={Group}
+          alt="illustration of various characters atop a bao"
+        ></m.img>
         <div className="buttons-container container">
           <m.button
             className="food-btn btn"

@@ -14,6 +14,8 @@ import SidesMenu from "../Multimedia/Vectors/MenuSVGs/SidesBox.svg";
 import SPMenu from "../Multimedia/Vectors/MenuSVGs/SPBox.svg";
 import DessertMenu from "../Multimedia/Vectors/MenuSVGs/DessertBox.svg";
 
+import Group from "../Multimedia/Vectors/menu_illustration.svg";
+
 const Images = [
   { image: BaoMenu, title: "bao" },
   { image: DonburiMenu, title: "donburi" },
@@ -76,7 +78,11 @@ const Menu = ({ setMenuOpen, menuOpen, setDrinksOpen, drinksOpen }) => {
         animate={{ x: menuOpen ? "0%" : "100%" }}
         transition={{ duration: 0.75, ease: [0.78, 0.01, 0.21, 1] }}
       >
-        <m.h2 className="food-title">FOOD</m.h2>
+        <m.img
+          className="food-title"
+          src={Group}
+          alt="illustration of various characters atop a bao"
+        ></m.img>
         <div className="buttons-container container">
           <m.button
             className="drinks-btn btn"
