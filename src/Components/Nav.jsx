@@ -50,14 +50,14 @@ const Nav = ({
 
           <p>13 Jack Rosenthal St, Manchester M15 4FN</p>
         </m.div>
-        <button
+        <m.button
           className="reservations-btn-mob"
           onClick={() => {
             setBookingOpen(!bookingOpen);
           }}
         >
           <h3>Reserve Table</h3>
-        </button>
+        </m.button>
         <m.div
           className="logo-container"
           animate={

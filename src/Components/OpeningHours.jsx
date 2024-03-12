@@ -24,7 +24,7 @@ const OpeningHours = () => {
     },
     {
       name: "Thursday",
-      time: "12:00 - 23:00",
+      time: "12:00 - 22:00",
     },
     {
       name: "Friday",

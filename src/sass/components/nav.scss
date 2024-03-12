@@ -69,16 +69,20 @@
 }
 
 .reservations-btn-mob {
-  background-color: $off-black;
-  color: $white;
+  background-color: $green;
+  color: $off-black;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0 var(--spacing-16);
   border: 2px solid $off-black;
   font-weight: 500;
   position: fixed;
-  top: var(--spacing-128);
+  top: calc(var(--spacing-32) + var(--spacing-128));
   left: -8px;
+  font-size: 8px;
+  h3 {
+    font-weight: 700;
+  }
   @media (min-width: $layout-breakpoint-tablet) {
     display: none;
   }
